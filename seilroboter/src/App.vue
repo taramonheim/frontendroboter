@@ -7,11 +7,17 @@
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
+import Controls from './components/Controls.vue'
+//import Layout from './submodules/base_layout/src/components/interface';
+
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    HelloWorld,
+    Controls,
+    //Layout,
+   // Queue
   }
 }
 </script>
