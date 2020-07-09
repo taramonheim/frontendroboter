@@ -2,6 +2,7 @@
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
     <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Controls msg="Tara Monheim"/>
   </div>
 </template>
 
@@ -15,7 +16,7 @@ export default {
   name: 'App',
   components: {
     HelloWorld,
-    Controls
+    Controls,
     //Layout,
    // Queue
   }
