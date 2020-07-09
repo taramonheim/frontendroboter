@@ -13,7 +13,7 @@
 export default {
   name: 'Controls',
   props: {
-    msg: String
+   Controls: String
   }
 }
 </script>
