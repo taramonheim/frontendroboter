@@ -2,24 +2,41 @@
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
     <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Layout></Layout>
+    <ixypsilon></ixypsilon>
+    <zett></zett>
     <Controls msg="Tara Monheim"/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 import Controls from './components/Controls.vue'
-//import Layout from './submodules/base_layout/src/components/interface';
-
+import Layout from './submodules/base_layout/src/components/interface'
+import ixypsilon from './components/ixypsilon.vue'
+import zett from './components/zett.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld,
     Controls,
-    //Layout,
+    Layout,
+    ixypsilon,
+    zett,
    // Queue
-  }
+  },
+   props: {
+    test: {
+      type: String,
+    }
+  },
+  sockets: {
+        connect: function () {
+            console.log('socket connected')
+        },
+        nachrichtenname: function (data) {
+            console.log('this method was fired by the socket server. eg: io.emit("nachrichtenname"', data)
+        }
+  } 
 }
 </script>
 
