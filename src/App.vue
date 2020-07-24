@@ -5,12 +5,12 @@
     <Layout></Layout>
     <ixypsilon></ixypsilon>
     <zett></zett>
-    <Controls msg="Tara Monheim"/>
+    <controls msg="Tara Monheim"/>
   </div>
 </template>
 
 <script>
-import Controls from './components/Controls.vue'
+import controls from './components/controls.vue'
 import Layout from './submodules/base_layout/src/components/interface'
 import ixypsilon from './components/ixypsilon.vue'
 import zett from './components/zett.vue'
@@ -18,7 +18,7 @@ import zett from './components/zett.vue'
 export default {
   name: 'App',
   components: {
-    Controls,
+    controls,
     Layout,
     ixypsilon,
     zett,
