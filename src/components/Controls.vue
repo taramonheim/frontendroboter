@@ -6,19 +6,38 @@
     <p class="card-text">Plakat zum Thema XY</p>
     <a href="#" class="card-link">Steuer den Roboter an die Position des Plakats</a>
   </div>
+  <div><xy/></div>
 </div>
 </template>
 
 <script>
+import xy from './ixypsilon.vue'
+
 export default {
-  name: 'Controls',
+  name: 'controls',
+  components: {
+    xy,
+  },
   props: {
-   Controls: String
+    test:{
+    type: String,
   }
+},
+ sockets: {
+        connect: function () {
+            console.log('socket connected')
+        },
+        nachrichtenname: function (data) {
+            console.log('this method was fired by the socket server. eg: io.emit("nachrichtenname"', data)
+        }
+  } 
+  //hier folgen ggf. noch methods, mounted() usw.
 }
 </script>
 
 <style scoped>
+/*#xy {
+}*/
 h3 {
   margin: 40px 0 0;
 }
