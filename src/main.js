@@ -8,10 +8,12 @@ import VueSocketIO from 'vue-socket.io'
 
 Vue.use(new VueSocketIO({
   debug: true,
-  connection: 'http://3.121.41.235:3000',
-  options: { path: "/my-app/" } //Optional options
-}))
-// https://hal.hfg.design:10000/tarsbot_control
+  // eslint-disable-next-line no-template-curly-in-string
+  connection: 'https://hal.hfg.design:10000/tarsbot_control',
+  options: {
+    useConnectionNamespace: true,
+  },
+}));
 
 Vue.config.productionTip = false
 new Vue({
