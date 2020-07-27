@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import controls from './components/controls.vue'
+import controls from './components/Controls.vue'
 import Layout from './submodules/base_layout/src/components/interface'
 
 export default {
