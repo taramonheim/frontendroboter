@@ -15,7 +15,7 @@
             srcurl: {
                 type: String,
                 //CHANGEME: hier (vorerst) lokale IP-Adresse des Pi eintragen!
-                default: "http://hal.hfg.design:50005/live-lab.mjpg"
+                default: "http://hal.hfg.design:50005/live-lab.mjpg" //wenn in IoT Wlan hier IP eintragen
             }
         }
     }
