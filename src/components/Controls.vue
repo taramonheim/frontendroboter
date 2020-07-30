@@ -4,9 +4,9 @@
     <h5 class="card-title">Plakat von X</h5>
     <h6 class="card-subtitle mb-2 text-muted">Programmiertes Entwerfen</h6>
     <p class="card-text">Plakat zum Thema XY</p>
-    <h6>Steuer den Roboter an die Position des Plakats</h6>
+    <h6 class="text-left">Steuer den Roboter an die Position des Plakats</h6>
   </div>
-  <div><xy/></div>
+  <div><xy></xy></div>
 </div>
 </template>
 
@@ -42,7 +42,8 @@ h3 {
   margin: 40px 0 0;
 }
 h6 {
-   color: #42b983;
+  color: #42b983;
+  padding:  left; 
 }
 ul {
   list-style-type: none;
