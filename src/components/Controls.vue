@@ -1,10 +1,10 @@
 <template>
-<div class="card" style="width: 18rem;">
+<div class="card cardcenter" style="width: 18rem;">
   <div class="card-body">
-    <h5 class="card-title">Plakat von X</h5>
-    <h6 class="card-subtitle mb-2 text-muted">Programmiertes Entwerfen</h6>
-    <p class="card-text">Plakat zum Thema XY</p>
-    <h6 class="text-left">Steuer den Roboter an die Position des Plakats</h6>
+    <h5 class="card-title textlinks">SeilroboterXY</h5>
+    <h6 class="card-subtitle mb-2 text-muted textlinks">Full Stack Development</h6>
+    <p class="card-text textlinks">Ich kann mich auf der X und Y Achse bewegen</p>
+    <h6 class="text-left">Steuer den Roboter an die gewünschte Position</h6>
   </div>
   <div><xy></xy></div>
 </div>
@@ -38,6 +38,14 @@ export default {
 <style scoped>
 /*#xy {
 }*/
+.cardcenter{
+  display: block;
+  margin-left: auto;
+  margin-right: auto
+}
+.textlinks{
+  text-align: left; 
+}
 h3 {
   margin: 40px 0 0;
 }

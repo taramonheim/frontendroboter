@@ -1,13 +1,11 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App" />
-    <Layout streamUrl = 'http://ippi:8080/stream.mjpg'> <!--hier kommt die Ip Pi rein-->
+    <Layout streamUrl = 'http://172.21.13.218:8080/stream.mjpg'> <!--hier kommt die Ip Pi rein-->
       <template v-slot:videocomponent></template>
       <template v-slot:controlcomponent>
         <controls msg="Tara Monheim" /></template>
-      <template v-slot:queuecomponent> <queue>hier</queue>Steuer den Roboter an die gewünschte Position mithilfe des Sliders, um dir die
-        Plakate der Studenten anzuschauen.</template>
+      <template v-slot:queuecomponent > <queue></queue></template>
     </Layout>
   </div>
 </template>
@@ -41,6 +39,9 @@
 </script>
 
 <style>
+.textlinks{
+  text-align: left; 
+}
   #app {
     font-family: Avenir, Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;

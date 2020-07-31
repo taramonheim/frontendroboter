@@ -34,7 +34,7 @@
         const x = (clientX - left) / offsetWidth;
         const y = (clientY - top) / offsetHeight;
         this.point = [x, y] 
-        this.$socket.emit('position', this.point); //im backend eingegeben 
+        this.$socket.emit('positionxy', this.point); //im backend eingegeben 
       },
       offset(el) {
         const isBody = el.tagName === 'BODY'
@@ -75,7 +75,7 @@
 
 <style scoped>
   #border {
-    border: 1.5px solid rgb(139, 139, 139);
+    border: 0.5px solid rgb(139, 139, 139);
     border-radius: 8px;
     padding: 5%;
     height: 200px;
