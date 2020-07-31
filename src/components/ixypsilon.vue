@@ -18,10 +18,6 @@
     data: () => ({
       point: [0.5, 0.5],
       connected: false,
-      currentQueue: [],
-      ownId: "undefined",
-      clientName: "undefined",
-      currentTimer: 0,
     }),
 
     methods: {
@@ -38,7 +34,7 @@
         const x = (clientX - left) / offsetWidth;
         const y = (clientY - top) / offsetHeight;
         this.point = [x, y] 
-        this.$socket.emit('position', this.point); //im backend eingegeben 
+        this.$socket.emit('positionxy', this.point); //im backend eingegeben 
       },
       offset(el) {
         const isBody = el.tagName === 'BODY'
@@ -61,7 +57,7 @@
       connect: function () {
         console.log('socket connected')
         this.connected = true;
-        this.ownId = this.$socket.id
+        this.$store.state.ownId = this.$socket.id
         this.$socket.emit("register_front")
       },
       disconnect: function () {
@@ -72,18 +68,6 @@
       nsp_list: function (data) {
         console.log("NSPs:" + data);
       },
-      update_queue: function (data) {
-        this.currentQueue = data;
-      },
-      queue_ping: function () {
-        this.$socket.emit("queue_pong")
-      },
-      update_timer: function (data) {
-        this.currentTimer = data;
-      },
-      client_name: function (data) {
-        this.clientName = data;
-      }
     },
     //hier folgen ggf. noch methods, mounted() usw.
   };
@@ -91,7 +75,7 @@
 
 <style scoped>
   #border {
-    border: 1.5px solid rgb(139, 139, 139);
+    border: 0.5px solid rgb(139, 139, 139);
     border-radius: 8px;
     padding: 5%;
     height: 200px;
