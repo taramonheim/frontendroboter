@@ -16,8 +16,6 @@ Vue.use(new VueSocketIO({
   },
 }));
 
-// https://hal.hfg.design:10000/tarsbot_control
-
 Vue.use(Vuex);
 const store = new Vuex.Store({
   state: {
